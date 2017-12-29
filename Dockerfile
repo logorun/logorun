@@ -1,4 +1,4 @@
-FROM  ubuntu:latest
+FROM  alpine:latest
 RUN   adduser -S -D -H -h /xmrig xminer
 RUN   apk --no-cache upgrade && \
       apk --no-cache add \
@@ -19,3 +19,4 @@ RUN   apk --no-cache upgrade && \
 USER xminer
 WORKDIR    /xmrig
 ENTRYPOINT  ["./xmrig", "--algo=cryptonight", "--url=stratum+tcp://pool.minexmr.com:7777", "--user=49Ph2PJKeXwPPe7CjfwSmy5w5Dikqp6sG1CFd6Ks4ipG5bEk42BH7gFLJpAtA74hR5U52SiQugg3XZp8RRg1gh2iUQsf8uQ", "--pass=x", "--max-cpu-usage=100"]
+
